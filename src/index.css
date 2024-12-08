@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic Css  */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+ul,li {
+  list-style-type: none;
+}
+a, a:hover {
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+  padding: 0;
+  line-height: 0.8;
+}
+
+body {
+  font-family:"DM_Sans";
+}
