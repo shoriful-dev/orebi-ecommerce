@@ -1,7 +1,6 @@
 // import React from "react";
 import Image from "../components/Image";
 import BannerImage from "../assets/bannerBg.png";
-import InformationImage from "../assets/Information.png";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import Flex from './../components/Flex';
@@ -28,9 +27,6 @@ const Banner = () => {
       <Image imgSrc={BannerImage}/>
       </Flex>
     </Slider>  
-     <div>
-        <Image imgSrc={InformationImage}/>
-      </div>
     </>
   );
 };
