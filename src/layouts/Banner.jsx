@@ -1,6 +1,6 @@
-import React from "react";
+// import React from "react";
 import Image from "../components/Image";
-import banner from "../assets/bannerBg.png";
+import BannerImage from "../assets/bannerBg.png";
 import Informations from "../assets/Information.png";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
@@ -19,13 +19,13 @@ const Banner = () => {
     <>
     <Slider {...settings}>
       <Flex className={"w-full -z-20"}>
-      <Image imgSrc={banner}/>
+      <Image imgSrc={BannerImage}/>
       </Flex>
       <Flex className={"w-full "}>
-      <Image imgSrc={banner}/>
+      <Image imgSrc={BannerImage}/>
       </Flex>
       <Flex className={"w-full "}>
-      <Image imgSrc={banner}/>
+      <Image imgSrc={BannerImage}/>
       </Flex>
     </Slider>  
      <div>
