@@ -2,10 +2,10 @@
 import Container from "../components/Container";
 import Products from "../components/Products";
 import Text from "../components/Text";
-import OfferOne from "../assets/Offerone.png";
-import OfferTwo from "../assets/Offertwo.png";
-import OfferThree from "../assets/Offerthree.png";
-import OfferFour from "../assets/Offerfour.png";
+import OfferOne from "../assets/offerone.png";
+import OfferTwo from "../assets/offertwo.png";
+import OfferThree from "../assets/offerthree.png";
+import OfferFour from "../assets/offerfour.png";
 import Flex from "../components/Flex";
 
 const SpecialOffer = () => {
