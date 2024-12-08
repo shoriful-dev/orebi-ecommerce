@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import Image from "../components/Image";
 import banner from "../assets/bannerBg.png";
 import Information from "../assets/information.png";
