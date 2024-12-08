@@ -3,10 +3,10 @@ import Container from "../components/Container";
 import Flex from "../components/Flex";
 import Products from "../components/Products";
 import Text from "../components/Text";
-import BestOne from "../assets/bestOne.png";
-import BestTwo from "../assets/bestTwo.png";
-import BestThree from "../assets/bestThree.png";
-import BestFour from "../assets/bestFour.png";
+import BestOne from "../assets/bestone.png";
+import BestTwo from "../assets/besttwo.png";
+import BestThree from "../assets/bestthree.png";
+import BestFour from "../assets/bestfour.png";
 
 const BestSeller = () => {
   return (
