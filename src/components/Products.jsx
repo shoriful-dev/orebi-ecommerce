@@ -6,17 +6,25 @@ import Image from "./Image";
 import Badge from "./Badge";
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import { HiOutlineRefresh } from "react-icons/hi";
+import { useDispatch } from 'react-redux';
+import { addCart } from '../app/slices/cartSlice';
 
-const Products = (props) => {
-  const { imgSrc, badgeText, text3, text4, text5 } = props;
-  return (
+const Products = ({ imgSrc, title, price, badgeText, text3, text4, text5, item }) => {
+  
+  
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(addCart({...item,quantity: 1}));
+  }
+  
+  return (   
     <>
       <Container>
         <div className="w-full px-4">
-          <div className="relative group overflow-y-hidden">
-            <Image imgSrc={imgSrc} />
+          <div className="relative group overflow-y-hidden border">
+            <Image imgSrc={imgSrc} className={"w-[300px] h-[300px]"} />
             <Badge text={badgeText} className={"absolute top-5 left-5"} />
-            <div className="w-full h-[120px] py-5 px-5 duration-500 absolute bottom-[-150px] left-0 bg-white opacity-80 invisible group-hover:visible space-y-5 group-hover:bottom-0">
+            <div className="w-full h-[120px] py-5 px-5 duration-500 absolute bottom-[-150px] left-0 bg-white opacity-100 invisible group-hover:visible space-y-5 group-hover:bottom-0">
               <Flex className={"justify-end space-x-3 group-hover:visible"}>
                 <p className="text-[#767676] hover:text-black hover:font-bold cursor-pointer">
                   Add to Wish List
@@ -29,7 +37,7 @@ const Products = (props) => {
                 </p>
                 <HiOutlineRefresh />
               </Flex>
-              <Flex className={"justify-end space-x-3 group-hover:visible"}>
+              <Flex onClick={handleAddToCart} className={"justify-end space-x-3 group-hover:visible"}>
                 <p className="text-[#767676] hover:text-black hover:font-bold cursor-pointer">
                   Add to Cart
                 </p>
@@ -61,3 +69,5 @@ const Products = (props) => {
 };
 
 export default Products;
+
+

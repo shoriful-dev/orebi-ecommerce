@@ -1,6 +1,7 @@
 // import React from "react";
 import Image from "../components/Image";
 import BannerImage from "../assets/bannerBg.png";
+import BannerImages from "../assets/bannerImages.png";
 import "slick-carousel/slick/slick.css";
 import Slider from "react-slick";
 import Flex from './../components/Flex';
@@ -26,7 +27,10 @@ const Banner = () => {
       <Flex className={"w-full "}>
       <Image imgSrc={BannerImage}/>
       </Flex>
-    </Slider>  
+    </Slider>
+    <div className="">
+      <Image imgSrc={BannerImages}/>
+    </div>
     </>
   );
 };

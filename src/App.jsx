@@ -14,6 +14,7 @@ import Journal from "./pages/Journal";
 import Error from "./pages/Error";
 import MyAccount from "./pages/MyAccount";
 import LogOut from "./pages/LogOut";
+import Cart from "./pages/Cart";
 
 
 const router = createBrowserRouter(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(
       <Route path='/journal' element={<Journal/>}/>
       <Route path='/my-account' element={<MyAccount/>}/>
       <Route path='/log-out' element={<LogOut/>}/>
+      <Route path='/cart' element={<Cart/>}/>
       <Route path='*' element={<Error/>}/>
     </Route>
     </> 

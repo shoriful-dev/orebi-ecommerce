@@ -5,8 +5,6 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { FaUser, FaShoppingCart } from "react-icons/fa";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
-import Image from "../components/Image";
-import CartEmpty from "../assets/cartEmpty.png";
 
 const Category = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -56,7 +54,6 @@ const Category = () => {
     setIsUserDropdownOpen(false);
     setIsCartDropdownOpen(false);
   };
-
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -201,32 +198,16 @@ const Category = () => {
               </div>
             )}
             <div className="relative">
-      <div 
-        ref={cartTriggerRef}
-        onClick={handleCartDrop}
-        className="cursor-pointer"
-      >
-        <FaShoppingCart />
-      </div>
-      
-      {isCartDropdownOpen && (
-        <div 
-          ref={cartDropdownRef}
-          className="absolute top-full right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg z-20"
-        >
-          <div className="p-4 text-center">
-            <Image 
-              imgSrc={CartEmpty}
-              alt="Empty Cart"
-              width={200}
-              height={200}
-              className="mx-auto mb-4"
-            />
-            
-          </div>
-        </div>
-      )}
-    </div>
+              <Link to={"/cart"}>
+                <div
+                  ref={cartTriggerRef}
+                  onClick={handleCartDrop}
+                  className="cursor-pointer"
+                >
+                  <FaShoppingCart />
+                </div>
+              </Link>
+            </div>
           </div>
         </Container>
       </div>
