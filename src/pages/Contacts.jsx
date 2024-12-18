@@ -4,7 +4,7 @@ import RootLayouts from '../components/RootLayouts'
 const Contacts = () => {
   return (
     <div>
-      <RootLayouts />
+      <h1>Contacts</h1>
     </div>
   )
 }

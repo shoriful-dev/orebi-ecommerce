@@ -18,7 +18,7 @@ const About = () => {
         <div className="w-[1600px] h-[105px] text-[#767676] text-[40px]">
           <p className="mt-16 leading-[50px]">Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.</p>
         </div>
-        <div className="max-w-container grid grid-cols-3 py-[100px]">
+        <div className="max-w-container grid grid-cols-3 py-[50px]">
           <div className="">
             <h2 className="font-bold text-[25px] mt-10">Our Vision</h2>
             <p className="text-[#767676] w-[431px] leading-6 mt-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an   printer took a galley of type and scrambled it to make a type specimen book.</p>

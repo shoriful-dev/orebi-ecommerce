@@ -1,10 +1,11 @@
 // import React from "react";
 import { useRef, useState, useEffect } from "react";
-import { IoMenu, IoSearch } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaUser, FaShoppingCart } from "react-icons/fa";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
+import Search from "../components/Search";
 
 const Category = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -162,14 +163,9 @@ const Category = () => {
               </ul>
             </div>
           )}
-          <div className="flex items-center relative py-10">
-            <input
-              type="text"
-              placeholder="Search Products"
-              className="w-[150px] sm:w-[200px] md:w-[400px] lg:w-[600px] h-12 px-3 py-2 border bg-white text-placeHolderTC"
-            />
-            <IoSearch className="absolute right-5 cursor-pointer" />
-          </div>
+
+          <Search />
+
           <div className="flex items-center relative">
             <div
               ref={triggerRef}

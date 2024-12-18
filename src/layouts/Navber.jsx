@@ -1,7 +1,7 @@
 // import React from 'react'
 import Container from "../components/Container";
 import Image from "../components/Image";
-import logo from "../assets/logo.png";
+import mainLogo from '../assets/logo.png';
 import { Link, NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 
@@ -13,7 +13,7 @@ const Navber = () => {
       >
         <div className="logo pt-1">
           <Link to={"/"}>
-            <Image imgSrc={logo} imgAlt="logo" />
+            <Image imgSrc={mainLogo} imgAlt="logo" className={'w-auto'}/>
           </Link>
         </div>
         <div className="menu_bar w-full flex justify-end flex-auto sm:hidden">

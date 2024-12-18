@@ -36,9 +36,9 @@ const BestSeller = () => {
     <>
       <Container>
         <Text
-          text={"New Arrivals"}
+          text={"Best Sellers"}
           as={"h1"}
-          className={"text-4xl font-bold mb-10"}
+          className={"text-4xl font-bold mb-10 mt-32"}
         />
         <Slider {...settings}>
           {all.map((item, index) => (
@@ -47,9 +47,9 @@ const BestSeller = () => {
               key={index}
               imgSrc={item.images}
               badgeText={item.category}
-              text3={item.title}
-              text4={item.price}
-              text5={item.rating.rate}
+              text3={item.title.slice(0, 20)}
+              text4={"$" + item.price}
+              text5={"Rating: " + " ⭐ " + item.rating}
             />
           ))}
         </Slider>

@@ -32,7 +32,7 @@ const SpecialOffer = () => {
     <>
       <Container>
         <Text
-          text={"New Arrivals"}
+          text={"Special Offer"}
           as={"h1"}
           className={"text-4xl font-bold mb-10"}
         />
@@ -43,9 +43,9 @@ const SpecialOffer = () => {
               key={index}
               imgSrc={item.image}
               badgeText={item.category}
-              text3={item.title}
-              text4={item.price}
-              text5={item.rating.rate}
+              text3={item.title.slice(0, 20)}
+              text4={"$" +item.price}
+              text5={"Rating: " + " ⭐ " + item.rating.rate}
             />
           ))}
         </Slider>
