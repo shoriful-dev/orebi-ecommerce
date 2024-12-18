@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <div className="pt-10">
       <Link to={"/"}>
-            <Image imgSrc={logo} imgAlt="logo" className={'w-[100px]'}/>
+            <Image imgSrc={logo} imgAlt="logo" className={'w-[122px] h-[29px]'}/>
       </Link>
       </div>
     </div>
