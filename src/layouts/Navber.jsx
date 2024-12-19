@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react';
 import Container from "../components/Container";
 import Image from "../components/Image";
 import mainLogo from '../assets/logo.png';
@@ -8,19 +8,17 @@ import { IoMenu } from "react-icons/io5";
 const Navber = () => {
   return (
     <>
-      <Container
-        className={"flex py-5 px-5 md:px-5 lg:px-5 xl:px-0 md:py-8 lg:py-10"}
-      >
+      <Container className="flex py-5 px-5 md:px-5 lg:px-5 xl:px-0 md:py-8 lg:py-10 items-center justify-between">
         <div className="logo pt-1">
           <Link to={"/"}>
-            <Image imgSrc={mainLogo} imgAlt="logo" className={'w-auto'}/>
+            <Image imgSrc={mainLogo} imgAlt="logo" className="w-auto" />
           </Link>
         </div>
-        <div className="menu_bar w-full flex justify-end flex-auto sm:hidden">
+        <div className="menu_bar flex sm:hidden">
           <IoMenu className="text-2xl" />
         </div>
-        <div className="menu flex flex-auto justify-end">
-          <ul className="flex sm:space-x-6 md:space-x-10 lg:space-x-14 xs:hidden md:block text-[#767676]">
+        <div className="menu hidden sm:flex flex-auto justify-end">
+          <ul className="flex space-x-6 md:space-x-10 lg:space-x-14 text-[#767676]">
             <NavLink
               to="/"
               className={({ isActive }) =>

@@ -1,11 +1,11 @@
-// import React from "react";
-import { useRef, useState, useEffect } from "react";
-import { IoMenu } from "react-icons/io5";
-import { IoMdArrowDropdown } from "react-icons/io";
-import { FaUser, FaShoppingCart } from "react-icons/fa";
-import Container from "../components/Container";
-import { Link } from "react-router-dom";
-import Search from "../components/Search";
+import React from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { IoMenu } from 'react-icons/io5';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { FaUser, FaShoppingCart } from 'react-icons/fa';
+import Container from '../components/Container';
+import { Link } from 'react-router-dom';
+import Search from '../components/Search';
 
 const Category = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -18,7 +18,7 @@ const Category = () => {
   };
   // Use effect to handle outside clicks
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       // Check if the click is outside both the dropdown and the menu trigger
       if (
         dropdownRef.current &&
@@ -31,11 +31,11 @@ const Category = () => {
     };
 
     // Add event listener when component mounts
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     // Clean up the event listener when component unmounts
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
@@ -57,7 +57,7 @@ const Category = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       // Check if the click is outside both the dropdown and the menu trigger
       if (
         userDropdownRef.current &&
@@ -70,15 +70,14 @@ const Category = () => {
     };
 
     // Add event listener when the component mounts
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
   //? User Dropdown Part End
-
   //? Cart Dropdown Part Start
   const [isCartDropdownOpen, setIsCartDropdownOpen] = useState(false);
   const cartDropdownRef = useRef(null);
@@ -89,7 +88,7 @@ const Category = () => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = event => {
       // Check if the click is outside both the dropdown and the menu trigger
       if (
         cartDropdownRef.current &&
@@ -102,11 +101,11 @@ const Category = () => {
     };
 
     // Add event listener when the component mounts
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
   //? Cart Dropdown Part End
@@ -130,32 +129,32 @@ const Category = () => {
             >
               <ul className="px-5" onClick={toggleDropdown}>
                 <Link
-                  to={"/about"}
+                  to={'/about'}
                   className="flex items-center justify-between hover:text-white hover:font-bold hover:ml-2 duration-300"
                 >
                   <li className="py-5">Accessories</li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={'/about'}>
                   <li className="py-4 hover:text-white hover:font-bold hover:ml-3 duration-300">
                     Furniture
                   </li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={'/about'}>
                   <li className="py-4 hover:text-white hover:font-bold hover:ml-3 duration-300">
                     Electronics
                   </li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={'/about'}>
                   <li className="py-4 hover:text-white hover:font-bold hover:ml-3 duration-300">
                     Clothes
                   </li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={'/about'}>
                   <li className="py-4 hover:text-white hover:font-bold hover:ml-3 duration-300">
                     Accessories
                   </li>
                 </Link>
-                <Link to={"/about"}>
+                <Link to={'/about'}>
                   <li className="py-4 hover:text-white hover:font-bold hover:ml-3 duration-300">
                     Home Appliances
                   </li>
@@ -181,12 +180,12 @@ const Category = () => {
                 ref={userDropdownRef}
                 className="absolute top-full right-0 w-[200px] border bg-white shadow-lg mt-2 z-10"
               >
-                <Link to={"/my-account"} onClick={handleMyAccount}>
+                <Link to={'/my-account'} onClick={handleMyAccount}>
                   <h3 className="text-center py-4 hover:bg-black hover:text-white duration-200 cursor-pointer">
                     My Account
                   </h3>
                 </Link>
-                <Link to={"/log-out"} onClick={handleLogout}>
+                <Link to={'/log-out'} onClick={handleLogout}>
                   <h3 className="text-center py-4 hover:bg-black hover:text-white duration-200 cursor-pointer">
                     Log Out
                   </h3>
@@ -194,7 +193,7 @@ const Category = () => {
               </div>
             )}
             <div className="relative">
-              <Link to={"/cart"}>
+              <Link to={'/cart'}>
                 <div
                   ref={cartTriggerRef}
                   onClick={handleCartDrop}
