@@ -100,14 +100,12 @@ const Category = () => {
       }
     };
 
-    // Add event listener when the component mounts
     document.addEventListener('mousedown', handleClickOutside);
-
-    // Clean up the event listener when the component unmounts
+    
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
+  }, []); 
   //? Cart Dropdown Part End
   return (
     <>

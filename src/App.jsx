@@ -1,4 +1,4 @@
-// import React from "react";
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,23 +15,25 @@ import Error from "./pages/Error";
 import MyAccount from "./pages/MyAccount";
 import LogOut from "./pages/LogOut";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-    <Route path='/' element={<RootLayouts/>}>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/shop' element={<Shop/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path='/contacts' element={<Contacts/>}/>
-      <Route path='/journal' element={<Journal/>}/>
-      <Route path='/my-account' element={<MyAccount/>}/>
-      <Route path='/log-out' element={<LogOut/>}/>
-      <Route path='/cart' element={<Cart/>}/>
-      <Route path='*' element={<Error/>}/>
-    </Route>
-    </> 
+      <Route path="/" element={<RootLayouts />}>
+        <Route path="/" element={<Home />} />
+        <Route path="shop" element={<Shop />} />
+        <Route path="about" element={<About />} />
+        <Route path="contacts" element={<Contacts />} />
+        <Route path="journal" element={<Journal />} />
+        <Route path="my-account" element={<MyAccount />} />
+        <Route path="log-out" element={<LogOut />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="*" element={<Error />} />
+        <Route path="checkout" element={<Checkout />} />
+      </Route>
+    </>
   )
 );
 

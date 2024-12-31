@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import Text from '../components/Text';
@@ -52,7 +51,7 @@ const Footer = () => {
               <Text as="h2" className="text-sm mt-2" text="Secure Payments" />
             </div>
           </div>
-          <div className="mt-10 md:mt-0">
+          <div className="mt-10">
             <Text
               as="h2"
               className="font-bold text-base"
@@ -69,7 +68,7 @@ const Footer = () => {
               text="575 Crescent Ave. Quakertown, PA 18951"
             />
           </div>
-          <div className="mt-10 md:mt-0 flex justify-center lg:justify-start">
+          <div className="mt-10 flex justify-center lg:justify-start">
             <Link to={'/'}>
               <Image imgSrc={logo} imgAlt="logo" className={'w-32'} />
             </Link>

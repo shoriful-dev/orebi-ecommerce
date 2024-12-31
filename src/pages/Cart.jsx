@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Text from '../components/Text';
 import Flex from '../components/Flex';
 import Container from '../components/Container';
@@ -8,10 +8,15 @@ import { ImCross } from 'react-icons/im';
 import { FiMinus, FiPlus } from 'react-icons/fi';
 import { FaCaretDown, FaCheck } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrementQuantity, incrementQuantity, removeCart } from '../app/slices/cartSlice';
+import {
+  decrementQuantity,
+  incrementQuantity,
+  removeCart,
+} from '../app/slices/cartSlice';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
-  const cart = useSelector((state) => state.cartSlice.cartProducts);
+  const cart = useSelector(state => state.cartSlice.cartProducts);
   const dispatch = useDispatch();
 
   const [subtotal, setSubtotal] = useState(0);
@@ -19,20 +24,23 @@ const Cart = () => {
 
   // Recalculate subtotal and total whenever cart changes
   useEffect(() => {
-    const calculatedSubtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    const calculatedSubtotal = cart.reduce(
+      (acc, item) => acc + item.price * item.quantity,
+      0
+    );
     setSubtotal(calculatedSubtotal);
     setTotal(calculatedSubtotal); // Add additional charges like tax/shipping here if needed
   }, [cart]);
 
-  const handleRemove = (id) => {
+  const handleRemove = id => {
     dispatch(removeCart(id));
   };
 
-  const handleIncrement = (item) => {
+  const handleIncrement = item => {
     dispatch(incrementQuantity(item.id));
   };
 
-  const handleDecrement = (item) => {
+  const handleDecrement = item => {
     if (item.quantity > 1) {
       dispatch(decrementQuantity(item.id));
     }
@@ -47,18 +55,21 @@ const Cart = () => {
 
     const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
-    const toggleDropdown = () => setIsOpen((prev) => !prev);
+    const toggleDropdown = () => setIsOpen(prev => !prev);
 
-    const toggleSize = (size) => {
-      setSelectedSizes((prev) =>
-        prev.includes(size) ? prev.filter((s) => s !== size) : [...prev, size]
+    const toggleSize = size => {
+      setSelectedSizes(prev =>
+        prev.includes(size) ? prev.filter(s => s !== size) : [...prev, size]
       );
     };
 
     // Close dropdown when clicking outside
     useEffect(() => {
-      const handleClickOutside = (event) => {
-        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      const handleClickOutside = event => {
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(event.target)
+        ) {
           setIsOpen(false);
         }
       };
@@ -97,7 +108,7 @@ const Cart = () => {
         {isOpen && (
           <div className="absolute left-0 right-0 top-full mt-1 z-10 bg-white border border-border shadow-lg">
             <div className="grid grid-cols-3 gap-2 p-4">
-              {sizes.map((size) => (
+              {sizes.map(size => (
                 <div
                   key={size}
                   className={cn(
@@ -109,7 +120,9 @@ const Cart = () => {
                   onClick={() => toggleSize(size)}
                 >
                   <span className="text-sm">{size}</span>
-                  {selectedSizes.includes(size) && <FaCheck className="w-4 h-4" />}
+                  {selectedSizes.includes(size) && (
+                    <FaCheck className="w-4 h-4" />
+                  )}
                 </div>
               ))}
             </div>
@@ -129,9 +142,17 @@ const Cart = () => {
         />
         <div className="mt-2 mb-32">
           <Flex className="items-center">
-            <Text as="h1" text="Home" className="text-headingC text-[12px] font-sans" />
+            <Text
+              as="h1"
+              text="Home"
+              className="text-headingC text-[12px] font-sans"
+            />
             <MdOutlineChevronRight className="text-headingC text-[12px]" />
-            <Text as="h1" text="Cart" className="text-headingC text-[12px] font-sans" />
+            <Text
+              as="h1"
+              text="Cart"
+              className="text-headingC text-[12px] font-sans"
+            />
           </Flex>
         </div>
         <div className="mb-14">
@@ -159,7 +180,7 @@ const Cart = () => {
               />
             </Flex>
           </div>
-          {cart.map((item) => (
+          {cart.map(item => (
             <div key={item.id} className="py-6 pl-4 border border-border">
               <Flex className="items-center">
                 <Flex className="items-center">
@@ -185,7 +206,11 @@ const Cart = () => {
                       className="text-base font-dm text-headingC cursor-pointer"
                       onClick={() => handleDecrement(item)}
                     />
-                    <Text as="h1" text={item.quantity} className="text-base font-dm text-headingC" />
+                    <Text
+                      as="h1"
+                      text={item.quantity}
+                      className="text-base font-dm text-headingC"
+                    />
                     <FiPlus
                       className="text-base font-dm text-headingC cursor-pointer"
                       onClick={() => handleIncrement(item)}
@@ -266,11 +291,13 @@ const Cart = () => {
         </div>
         <div className="flex justify-end mb-7">
           <div className="py-4 px-5 border bg-hoverheadeingC text-white bg-black">
-            <Text
-              as="h1"
-              text="Proceed to checkout"
-              className="text-sm font-bold font-dm"
-            />
+            <Link to={'/checkout'}>
+              <Text
+                as="h1"
+                text="Proceed to checkout"
+                className="text-sm font-bold font-dm"
+              />
+            </Link>
           </div>
         </div>
       </Container>
@@ -279,5 +306,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
