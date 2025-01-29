@@ -1,4 +1,3 @@
-import React from 'react'
 import Banner from "../layouts/Banner";
 import Promotional from "../layouts/Promotional";
 import Product from "../layouts/Product";

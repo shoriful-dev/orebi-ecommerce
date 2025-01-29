@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Container from './../components/Container';
 
 const Checkout = () => {
@@ -12,7 +13,7 @@ const Checkout = () => {
             <span className="text-gray-400">Have a coupon?</span> Click here to
             enter your code
           </p>
-          <input type="text" className='py-2 w-[1008px] border-b'/>
+          <input type="text" className="py-2 w-[1008px] border-b" />
         </div>
 
         <div className="">
@@ -27,7 +28,7 @@ const Checkout = () => {
             <input
               type="text"
               placeholder="First Name"
-              className="text-sm w-[500px] py-2 px-2 border-b"
+              className="text-sm w-[500px] py-2 px-2 border-b focus:outline-none focus:border"
             />
           </div>
           <div className="mt-10">
@@ -137,9 +138,26 @@ const Checkout = () => {
           />
         </div>
 
+        <div className="">
+          <h3 className="mt-40 text-[40px] font-bold">
+            Additional Information
+          </h3>
+          <p className="font-bold pt-10">Other Notes (optional)</p>
+          <input
+            className="mt-5 border-b w-[400px]"
+            type="text"
+            placeholder="Notes about your order, e.g. special notes for delivery."
+          />
+        </div>
+
+        <Link to={'/'}>
+          <button className="px-7 py-3 bg-black text-white mt-20">
+            Proceed to Bank
+          </button>
+        </Link>
       </Container>
     </>
   );
-}
+};
 
-export default Checkout
+export default Checkout;
