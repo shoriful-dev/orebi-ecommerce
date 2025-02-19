@@ -1,4 +1,3 @@
-import React from 'react';
 import Category from "../layouts/Category";
 import Navber from "../layouts/Navber";
 
