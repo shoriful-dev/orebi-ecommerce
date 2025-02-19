@@ -1,15 +1,15 @@
 // import React from 'react'
-import Category from "../layouts/Category"
-import Navber from "../layouts/Navber"
+// import Category from "../layouts/Category"
+// import Navber from "../layouts/Navber"
 
 const HeaderPart = () => {
   return (
     <div>
-      <Navber />
-      <Category />
+      {/* <Navber /> */}
+      {/* <Category /> */}
     </div>
   )
 }
 
-export default HeaderPart
+export default HeaderPart;
 
