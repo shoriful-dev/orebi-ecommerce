@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center mt-10 pb-10">
           <div className="flex space-x-10">
-            <FaFacebookSquare />
+            <FaFacebookSquare className='text-2xl'/>
             <FaLinkedin />
             <GrInstagram />
           </div>
