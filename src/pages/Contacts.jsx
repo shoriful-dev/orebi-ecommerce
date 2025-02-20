@@ -1,5 +1,5 @@
-import Container from "../components/Container";
-import Text from "../components/Text";
+import Container from '../components/Container';
+import Text from '../components/Text';
 import { Link } from 'react-router-dom';
 
 const Contacts = () => {
@@ -74,6 +74,6 @@ const Contacts = () => {
       </Container>
     </>
   );
-}
+};
 
 export default Contacts;
