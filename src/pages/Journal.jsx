@@ -1,15 +1,14 @@
 import Container from '../components/Container';
-import Image from "../components/Image";
-import ImageOne from "../assets/JornalOne.png";
-import ImageTwo from "../assets/JornalTwo.png";
-import ImageThree from "../assets/JornalThree.png";
-import ImageFour from "../assets/JornalFour.png";
-import ImageFive from "../assets/JornalFive.png";
-import ImageSix from "../assets/JornalSix.png";
-import ImageSeven from "../assets/JornalSeven.png";
-import ImageEight from "../assets/JornalEight.png";
+import Image from '../components/Image';
+import ImageOne from '../assets/JornalOne.png';
+import ImageTwo from '../assets/JornalTwo.png';
+import ImageThree from '../assets/JornalThree.png';
+import ImageFour from '../assets/JornalFour.png';
+import ImageFive from '../assets/JornalFive.png';
+import ImageSix from '../assets/JornalSix.png';
+import ImageSeven from '../assets/JornalSeven.png';
+import ImageEight from '../assets/JornalEight.png';
 import { Link } from 'react-router-dom';
-
 
 const Journal = () => {
   return (
