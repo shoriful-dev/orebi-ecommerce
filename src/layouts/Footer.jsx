@@ -78,7 +78,7 @@ const Footer = () => {
           <div className="flex space-x-10">
             <FaFacebookSquare className="text-2xl" />
             <FaLinkedin className="text-2xl" />
-            <GrInstagram />
+            <GrInstagram className="text-2xl" />
           </div>
           <div className="mt-5 md:mt-0 text-center md:text-left">
             <Text
