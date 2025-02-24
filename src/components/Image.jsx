@@ -5,4 +5,4 @@ const Image = ({ imgSrc, imgAlt, className }) => {
   )
 }
 
-export default Image
+export default Image;
