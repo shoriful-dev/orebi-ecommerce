@@ -14,7 +14,6 @@ const Products = ({ imgSrc, title, price, badgeText, text3, text4, text5, item }
   const handleAddToCart = () => {
     dispatch(addCart({...item, quantity: 1}));
   }
-
   return (
     <Container>
       <div className="w-full px-4">
