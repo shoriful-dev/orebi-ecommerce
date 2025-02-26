@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import Container from "../components/Container";
 import "slick-carousel/slick/slick.css";
