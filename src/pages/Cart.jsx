@@ -29,7 +29,7 @@ const Cart = () => {
       0
     );
     setSubtotal(calculatedSubtotal);
-    setTotal(calculatedSubtotal); // Add additional charges like tax/shipping here if needed
+    setTotal(calculatedSubtotal);
   }, [cart]);
 
   const handleRemove = id => {
