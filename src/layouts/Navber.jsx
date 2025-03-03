@@ -73,24 +73,32 @@ const Navber = () => {
       </Container>
       {show && (
         <div>
-          <ul className="flex flex-col space-y-2 justify-center items-center bg-gray-200 text-black font-bold font-DM_Sans">
-            <Link to={'/'}>
-              <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
-                Home
-              </li>
-            </Link>
-            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
-              Shop
-            </li>
-            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
-              About
-            </li>
-            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
-              Contacts
-            </li>
-            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
-              Journal
-            </li>
+          <ul className="flex flex-col justify-center items-center bg-gray-200 text-black font-bold font-DM_Sans">
+            <div className="hover:bg-gray-400 text-center py-2 duration-300 transition-transform w-full">
+              <Link to={'/'}>
+                <li className="">Home</li>
+              </Link>
+            </div>
+            <div className="hover:bg-gray-400 text-center py-2 duration-300 transition-transform w-full">
+              <Link to={'/shop'}>
+                <li className="">Shop</li>
+              </Link>
+            </div>
+            <div className="hover:bg-gray-400 text-center py-2 duration-300 transition-transform w-full">
+              <Link to={'/about'}>
+                <li className="">About</li>
+              </Link>
+            </div>
+            <div className="hover:bg-gray-400 text-center py-2 duration-300 transition-transform w-full">
+              <Link to={'/contacts'}>
+                <li className="">Contacts</li>
+              </Link>
+            </div>
+            <div className="hover:bg-gray-400 text-center py-2 duration-300 transition-transform w-full">
+              <Link to={'/journal'}>
+                <li className="">Journal</li>
+              </Link>
+            </div>
           </ul>
         </div>
       )}
