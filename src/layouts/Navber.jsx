@@ -3,6 +3,7 @@ import Image from "../components/Image";
 import mainLogo from '../assets/logo.png';
 import { Link, NavLink } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
+import { ImCross } from 'react-icons/im';
 import { useState } from "react";
 
 const Navber = () => {
@@ -19,7 +20,11 @@ const Navber = () => {
           </Link>
         </div>
         <div onClick={handleShow} className="menu_bar flex sm:hidden">
-          <IoMenu className="text-2xl" />
+          {show ? (
+            <ImCross className="flex items-center mt-1" />
+          ) : (
+            <IoMenu className="text-2xl" />
+          )}
         </div>
         <div className="menu hidden sm:flex flex-auto justify-end">
           <ul className="flex space-x-6 md:space-x-10 lg:space-x-14 text-[#767676]">
@@ -67,13 +72,25 @@ const Navber = () => {
         </div>
       </Container>
       {show && (
-        <div className="">
-          <ul>
-            <li>Home</li>
-            <li>Shop</li>
-            <li>About</li>
-            <li>Contacts</li>
-            <li>Journal</li>
+        <div>
+          <ul className="flex flex-col space-y-2 justify-center items-center bg-gray-200 text-black font-bold font-DM_Sans">
+            <Link to={'/'}>
+              <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
+                Home
+              </li>
+            </Link>
+            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
+              Shop
+            </li>
+            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
+              About
+            </li>
+            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
+              Contacts
+            </li>
+            <li className="hover:bg-gray-400 w-full text-center py-2 duration-300 transition-transform">
+              Journal
+            </li>
           </ul>
         </div>
       )}
