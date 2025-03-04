@@ -149,7 +149,6 @@ const Checkout = () => {
             placeholder="Notes about your order, e.g. special notes for delivery."
           />
         </div>
-
         <Link to={'/'}>
           <button className="px-7 py-3 bg-black text-white mt-20">
             Proceed to Bank
