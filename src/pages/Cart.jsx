@@ -290,7 +290,7 @@ const Cart = () => {
           </div>
         </div>
         <div className="flex justify-end mb-7">
-          <div className="py-4 px-5 border bg-hoverheadeingC text-white bg-black">
+          <div className="py-4 px-5 border bg-hoverheadeingC text-white bg-black hover:scale-110 transition-all duration-300 cursor-pointer">
             <Link to={'/checkout'}>
               <Text
                 as="h1"
