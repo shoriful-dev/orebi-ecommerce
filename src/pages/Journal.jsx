@@ -208,13 +208,13 @@ const Journal = () => {
               </div>
 
               {/* Black Button */}
-              {/* <div className="mt-12 flex">
+              <div className="mt-12 flex">
                 <Link to={'/'}>
                   <button className="px-8 py-3 bg-black text-white rounded-md hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-gray-700">
                     Load More
                   </button>
                 </Link>
-              </div> */}
+              </div>
             </div>
 
             {/* Sidebar */}
