@@ -15,5 +15,5 @@ const MyAccount = () => {
   );
 }
 
-export default MyAccount
+export default MyAccount;
 
