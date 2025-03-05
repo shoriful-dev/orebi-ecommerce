@@ -1,6 +1,3 @@
-const {
-  default: flattenColorPalette,
-} = require('tailwindcss/lib/util/flattenColorPalette');
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -22,9 +19,6 @@ export default {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
-      boxShadow: {
-        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
-      },
       screens: {
         xs: { min: '320px', max: '576px' },
       },
@@ -40,16 +34,5 @@ export default {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [],
 };
-
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme('colors'));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ':root': newVars,
-  });
-}
