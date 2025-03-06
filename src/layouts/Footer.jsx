@@ -3,7 +3,7 @@ import Container from '../components/Container';
 import Text from '../components/Text';
 import Image from '../components/Image';
 import logo from '../assets/logo.png';
-import { FaFacebookF, FaLinkedin } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
 
 const Footer = () => {
@@ -77,7 +77,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mt-10 pb-10">
           <div className="flex space-x-10">
             <FaFacebookF className="text-2xl" />
-            <FaLinkedin className="text-2xl" />
+            <FaLinkedinIn className="text-2xl" />
             <GrInstagram className="text-2xl" />
           </div>
           <div className="mt-5 md:mt-0 text-center md:text-left">
