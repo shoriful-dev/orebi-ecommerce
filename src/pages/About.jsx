@@ -13,7 +13,7 @@ const About = () => {
           <Image imgSrc={AboutOne}/>
           <Image imgSrc={AboutTwo}/>
         </div>
-        <div className="w-[1600px] h-[105px] text-[#767676] text-[40px]">
+        <div className="w-[1500px] h-[105px] text-[#767676] text-[40px] text-center">
           <p className="mt-16 leading-[50px]">Orebi is one of the world’s leading ecommerce brands and is internationally recognized for celebrating the essence of classic Worldwide cool looking style.</p>
         </div>
         <div className="max-w-container grid grid-cols-3 py-[50px]">
