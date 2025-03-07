@@ -49,9 +49,9 @@ const BestSeller = () => {
     async function getData() {
       try {
         const response = await axios.get("https://dummyjson.com/products?limit=200");
-        setAll(response.data.products); // Correctly extract products array
+        setAll(response.data.products);
       } catch (error) {
-        console.error("Error fetching data:", error); // Handle errors gracefully
+        console.error("Error fetching data:", error);
       }
     }
     getData();

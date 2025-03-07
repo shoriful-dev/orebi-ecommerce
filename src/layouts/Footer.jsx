@@ -15,19 +15,39 @@ const Footer = () => {
             <div>
               <Text as="h2" className="font-bold text-base mt-10" text="MENU" />
               <Link to={'/'}>
-                <Text as="h2" className="text-sm mt-5 font-DM_Sans" text="Home" />
+                <Text
+                  as="h2"
+                  className="text-sm mt-5 font-DM_Sans"
+                  text="Home"
+                />
               </Link>
               <Link to={'/shop'}>
-                <Text as="h2" className="text-sm mt-2 font-DM_Sans" text="Shop" />
+                <Text
+                  as="h2"
+                  className="text-sm mt-2 font-DM_Sans"
+                  text="Shop"
+                />
               </Link>
               <Link to={'/about'}>
-                <Text as="h2" className="text-sm mt-2 font-DM_Sans" text="About" />
+                <Text
+                  as="h2"
+                  className="text-sm mt-2 font-DM_Sans"
+                  text="About"
+                />
               </Link>
               <Link to={'/contacts'}>
-                <Text as="h2" className="text-sm mt-2 font-DM_Sans" text="Contacts" />
+                <Text
+                  as="h2"
+                  className="text-sm mt-2 font-DM_Sans"
+                  text="Contacts"
+                />
               </Link>
               <Link to={'/journal'}>
-                <Text as="h2" className="text-sm mt-2 font-DM_Sans" text="Journal" />
+                <Text
+                  as="h2"
+                  className="text-sm mt-2 font-DM_Sans"
+                  text="Journal"
+                />
               </Link>
             </div>
             <div>
