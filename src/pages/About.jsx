@@ -1,5 +1,3 @@
-// import React from 'react'
-
 import Container from "../components/Container"
 import Image from "../components/Image"
 import AboutOne from "../assets/aboutOne.png"
@@ -37,4 +35,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;
