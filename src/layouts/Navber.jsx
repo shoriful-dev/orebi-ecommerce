@@ -1,16 +1,16 @@
-import Container from "../components/Container";
-import Image from "../components/Image";
+import Container from '../components/Container';
+import Image from '../components/Image';
 import mainLogo from '../assets/logo.png';
-import { Link, NavLink } from "react-router-dom";
-import { IoMenu } from "react-icons/io5";
+import { Link, NavLink } from 'react-router-dom';
+import { IoMenu } from 'react-icons/io5';
 import { ImCross } from 'react-icons/im';
-import { useState } from "react";
+import { useState } from 'react';
 
 const Navber = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => {
     setShow(!show);
-  }
+  };
   return (
     <>
       <Container className="flex py-5 px-5 md:px-5 lg:px-5 xl:px-0 md:py-8 lg:py-10 items-center justify-between">
