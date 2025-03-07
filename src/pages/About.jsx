@@ -1,7 +1,7 @@
-import Container from "../components/Container"
-import Image from "../components/Image"
-import AboutOne from "../assets/aboutOne.png"
-import AboutTwo from "../assets/aboutTwo.png"
+import Container from "../components/Container";
+import Image from "../components/Image";
+import AboutOne from "../assets/aboutOne.png";
+import AboutTwo from "../assets/aboutTwo.png";
 
 
 const About = () => {
