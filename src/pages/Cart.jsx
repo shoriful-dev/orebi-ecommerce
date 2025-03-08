@@ -21,8 +21,7 @@ const Cart = () => {
 
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
-
-  // Recalculate subtotal and total whenever cart changes
+  
   useEffect(() => {
     const calculatedSubtotal = cart.reduce(
       (acc, item) => acc + item.price * item.quantity,
