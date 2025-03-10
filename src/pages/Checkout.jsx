@@ -13,7 +13,10 @@ const Checkout = () => {
             <span className="text-gray-400">Have a coupon?</span> Click here to
             enter your code
           </p>
-          <input type="text" className="py-2 w-[1008px] border-b outline-none" />
+          <input
+            type="text"
+            className="py-2 w-[1008px] border-b outline-none"
+          />
         </div>
 
         <div className="">
@@ -79,7 +82,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="House number and street name"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -90,7 +93,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="Town/City"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -101,7 +104,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="County"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -112,7 +115,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="Post Code"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -123,7 +126,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="Phone"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -134,7 +137,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="Email Address"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
@@ -144,7 +147,7 @@ const Checkout = () => {
           </h3>
           <p className="font-bold pt-10">Other Notes (optional)</p>
           <input
-            className="mt-5 border-b w-[400px]"
+            className="mt-5 border-b w-[400px] outline-none"
             type="text"
             placeholder="Notes about your order, e.g. special notes for delivery."
           />
