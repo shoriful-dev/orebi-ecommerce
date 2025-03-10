@@ -28,7 +28,7 @@ const Checkout = () => {
             <input
               type="text"
               placeholder="First Name"
-              className="text-sm w-[500px] py-2 px-2 border-b focus:outline-none focus:border"
+              className="text-sm w-[500px] py-2 px-2 border-b outline-none"
             />
           </div>
           <div className="mt-10">
@@ -38,7 +38,7 @@ const Checkout = () => {
             <input
               type="text"
               placeholder="Last Name"
-              className="text-sm w-[500px] py-2 px-2 border-b"
+              className="text-sm w-[500px] py-2 px-2 border-b outline-none"
             />
           </div>
         </div>
