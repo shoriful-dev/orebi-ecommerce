@@ -50,7 +50,7 @@ const Checkout = () => {
           <input
             type="text"
             placeholder="Company Name"
-            className="text-sm w-[1008px] py-2 px-2 border-b"
+            className="text-sm w-[1008px] py-2 px-2 border-b outline-none"
           />
         </div>
 
