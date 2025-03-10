@@ -13,7 +13,7 @@ const Checkout = () => {
             <span className="text-gray-400">Have a coupon?</span> Click here to
             enter your code
           </p>
-          <input type="text" className="py-2 w-[1008px] border-b" />
+          <input type="text" className="py-2 w-[1008px] border-b outline-none" />
         </div>
 
         <div className="">
