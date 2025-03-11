@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import Container from "../components/Container";
-import "slick-carousel/slick/slick.css";
-import Slider from "react-slick";
-import SamplePrevArrow from "../components/SamplePrevArrow";
-import SampleNextArrow from "../components/SampleNextArrow";
-import Text from "../components/Text";
-import Products from "../components/Products";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import Container from '../components/Container';
+import 'slick-carousel/slick/slick.css';
+import Slider from 'react-slick';
+import SamplePrevArrow from '../components/SamplePrevArrow';
+import SampleNextArrow from '../components/SampleNextArrow';
+import Text from '../components/Text';
+import Products from '../components/Products';
+import axios from 'axios';
 
 const Product = () => {
   var settings = {
@@ -47,7 +47,7 @@ const Product = () => {
   let [all, setAll] = useState([]);
   useEffect(() => {
     async function getData() {
-      let data = await axios.get("https://fakestoreapi.com/products");
+      let data = await axios.get('https://fakestoreapi.com/products');
       setAll(data.data);
     }
     getData();
@@ -56,9 +56,9 @@ const Product = () => {
     <>
       <Container>
         <Text
-          text={"New Arrivals"}
-          as={"h1"}
-          className={"text-4xl font-bold mb-10"}
+          text={'New Arrivals'}
+          as={'h1'}
+          className={'text-4xl font-bold mb-10'}
         />
         <Slider {...settings}>
           {all.map((item, index) => (
@@ -68,8 +68,8 @@ const Product = () => {
               imgSrc={item.image}
               badgeText={item.category}
               text3={item.title.slice(0, 20)}
-              text4={"$" +item.price}
-              text5={"Rating: " + " ⭐ " + item.rating.rate}
+              text4={'$' + item.price}
+              text5={'Rating: ' + ' ⭐ ' + item.rating.rate}
             />
           ))}
         </Slider>
