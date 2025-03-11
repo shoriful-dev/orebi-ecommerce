@@ -21,7 +21,7 @@ const Cart = () => {
 
   const [subtotal, setSubtotal] = useState(0);
   const [total, setTotal] = useState(0);
-  
+
   useEffect(() => {
     const calculatedSubtotal = cart.reduce(
       (acc, item) => acc + item.price * item.quantity,
