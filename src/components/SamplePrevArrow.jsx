@@ -1,4 +1,3 @@
-// import React from 'react'
 import { FaLongArrowAltLeft } from 'react-icons/fa';
 const SamplePrevArrow = props => {
   const { className, onClick } = props;
