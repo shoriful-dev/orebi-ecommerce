@@ -6,7 +6,7 @@ const SamplePrevArrow = props => {
       className={`${className} text-2xl text-white w-16 h-16 rounded-full bg-[#979797] items-center justify-center flex cursor-pointer absolute top-[120px] left-4 z-10`}
       onClick={onClick}
     >
-      <FaLongArrowAltLeft className="" />
+      <FaLongArrowAltLeft />
     </div>
   );
 };
