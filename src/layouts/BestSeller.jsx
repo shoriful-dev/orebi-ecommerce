@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
-import Container from "../components/Container";
-import "slick-carousel/slick/slick.css";
-import Slider from "react-slick";
-import SamplePrevArrow from "../components/SamplePrevArrow";
-import SampleNextArrow from "../components/SampleNextArrow";
-import Text from "../components/Text";
-import Products from "../components/Products";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import Container from '../components/Container';
+import 'slick-carousel/slick/slick.css';
+import Slider from 'react-slick';
+import SamplePrevArrow from '../components/SamplePrevArrow';
+import SampleNextArrow from '../components/SampleNextArrow';
+import Text from '../components/Text';
+import Products from '../components/Products';
+import axios from 'axios';
 
 const BestSeller = () => {
   var settings = {
@@ -48,10 +48,12 @@ const BestSeller = () => {
   useEffect(() => {
     async function getData() {
       try {
-        const response = await axios.get("https://dummyjson.com/products?limit=200");
+        const response = await axios.get(
+          'https://dummyjson.com/products?limit=200'
+        );
         setAll(response.data.products);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     }
     getData();
@@ -60,9 +62,9 @@ const BestSeller = () => {
     <>
       <Container>
         <Text
-          text={"Best Sellers"}
-          as={"h1"}
-          className={"text-4xl font-bold mb-10 mt-32"}
+          text={'Best Sellers'}
+          as={'h1'}
+          className={'text-4xl font-bold mb-10 mt-32'}
         />
         <Slider {...settings}>
           {all.map((item, index) => (
@@ -72,8 +74,8 @@ const BestSeller = () => {
               imgSrc={item.images}
               badgeText={item.category}
               text3={item.title.slice(0, 20)}
-              text4={"$" + item.price}
-              text5={"Rating: " + " ⭐ " + item.rating}
+              text4={'$' + item.price}
+              text5={'Rating: ' + ' ⭐ ' + item.rating}
             />
           ))}
         </Slider>
@@ -83,4 +85,3 @@ const BestSeller = () => {
 };
 
 export default BestSeller;
-
