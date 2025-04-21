@@ -23,6 +23,7 @@ function Items({ currentItems }) {
   );
 }
 
+// eslint-disable-next-line react/prop-types
 function Pagination({ itemsPerPage }) {
   const [all, setAll] = useState([]);
   const [itemOffset, setItemOffset] = useState(0);
