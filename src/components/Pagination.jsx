@@ -74,6 +74,6 @@ function Pagination({ itemsPerPage }) {
       </div>
     </>
   );
-}
+};
 
 export default Pagination;
