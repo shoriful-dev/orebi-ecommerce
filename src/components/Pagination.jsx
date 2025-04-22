@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import axios from "axios";
 import Products from "./Products";
 
+// eslint-disable-next-line react/prop-types
 function Items({ currentItems }) {
   return (
     <div className="w-full flex flex-wrap">
       {currentItems &&
+        // eslint-disable-next-line react/prop-types
         currentItems.map((item) => (
           <div className="w-1/3" key={item.id}>
             <Products
