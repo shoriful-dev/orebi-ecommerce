@@ -1,4 +1,3 @@
-// import React from 'react'
 import Container from '../components/Container'
 import Flex from '../components/Flex'
 import Pagination from '../components/Pagination'
