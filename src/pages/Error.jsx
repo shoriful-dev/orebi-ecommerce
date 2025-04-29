@@ -1,5 +1,3 @@
-// import React from 'react'
-
 import { IoSearch } from "react-icons/io5";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
