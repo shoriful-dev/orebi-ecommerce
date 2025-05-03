@@ -100,11 +100,11 @@ const Category = () => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []); 
+  }, []);
   //? Cart Dropdown Part End
   return (
     <>
