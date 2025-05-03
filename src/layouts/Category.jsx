@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRef, useState, useEffect } from 'react';
 import { IoMenu } from 'react-icons/io5';
 import { IoMdArrowDropdown } from 'react-icons/io';
